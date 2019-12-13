@@ -45,7 +45,13 @@ function getMode() {
 }
 
 app.get('/setMode', (req, res) => {
-    setMode(req.query.slowness, req.query.partSize, req.query.gradient, req.query.rainbow);
+    setMode(
+        req.query.slowness,
+        req.query.partSize,
+        req.query.gradient,
+        req.query.rainbow,
+        req.query.colors
+    );
     res.send(getMode());
 });
 

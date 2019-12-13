@@ -194,9 +194,8 @@ function setNew(sourceVal, newVal) {
 }
 
 function hasKeywords(command, keywords) {
-    const words = command.split(' ');
     for (let keyword of keywords) {
-        for (word of words) {
+        for (word of command) {
             if (word.startsWith(keyword)) {
                 return true;
             }

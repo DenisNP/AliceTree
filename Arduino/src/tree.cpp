@@ -7,11 +7,11 @@
 // wifi
 const char* ssid     = "Spider";
 const char* password = "12345679";
-const char* server = "https://server-address.com";
+const char* server = "http://my-alicetree-server/mode"; // CHANGE TO YOURS!!!
 WiFiMulti wifiMulti;
 
 // led
-#define NUM_LEDS 60
+#define NUM_LEDS 130
 #define BRIGHTNESS 200
 #define LED_PIN 13
 CRGB leds[NUM_LEDS];
@@ -19,6 +19,7 @@ CRGB leds[NUM_LEDS];
 // colors
 #define NUM_COLORS 24
 bool rainbow = false;
+bool isRandom = false;
 byte code = 10;
 byte colors[NUM_COLORS][3];
 byte slowness = 1;
@@ -140,8 +141,11 @@ void setMode(const String& s) {
     int lastColor = 0;
     String cStr = "";
 
+    // random
+    isRandom = s.substring(6, 7) == "1";
+
     // rainbow special mode
-    if (s.substring(6, 7) == "-") {
+    if (s.substring(7, 8) == "-") {
         rainbow = true;
         partSize = max(1, partSize / 8);
         return;
@@ -149,7 +153,7 @@ void setMode(const String& s) {
 
     // normal colors mode
     rainbow = false;
-    for (int i = 6; i < s.length(); i++) {
+    for (int i = 7; i < s.length(); i++) {
         char c = s.charAt(i);
         cStr += c;
         unsigned int cLen = cStr.length();
@@ -162,13 +166,13 @@ void setMode(const String& s) {
 }
 
 void animateStep() {
-    unsigned int currentNumColors = rainbow ? 360 : NUM_COLORS;
+    unsigned int currentNumColors = rainbow ? 36 : NUM_COLORS;
 
     for (int i = 0; i < NUM_LEDS; i++) {
         int color = floor(((double)step + i) / currentNumColors);
 
         if (rainbow) {
-            leds[i].setHSV(color, 100, 100);
+            leds[i].setHSV(color * 10, 100, 100);
         } else {
             // softly mix with next near the end
             int stepsToNext = partSize / 3;
@@ -190,12 +194,16 @@ void animateStep() {
 
     speedStep++;
     if (speedStep >= slowness) {
-        if (gradient) {
+        unsigned int colorLimit = currentNumColors * partSize;
+        if (isRandom) {
+            // random jump
+            step = (step + random((int)partSize, (int)colorLimit)) % colorLimit;
+        } else if (gradient) {
             // next color stop
-            step = (step + partSize) % (currentNumColors * partSize);
+            step = (step + partSize) % colorLimit;
         } else {
             // next animation step
-            step = ++step % (currentNumColors * partSize);
+            step = ++step % colorLimit;
         }
         speedStep = 0;
     }

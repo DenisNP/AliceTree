@@ -70,6 +70,7 @@ let code = 0;
 let slowness = 5;
 let partSize = 10;
 let gradient = true;
+let random = false;
 let rainbow = false;
 let colors = Array(colorsNum).fill('ffffff');
 
@@ -79,11 +80,12 @@ function setColors(_colors) {
     }
 }
 
-function setMode(_slowness, _partSize, _gradient, _rainbow, _colors) {
+function setMode(_slowness, _partSize, _gradient, _rainbow, _random, _colors) {
     slowness = Number.parseInt(setNew(slowness, _slowness));
     partSize = Number.parseInt(setNew(partSize, _partSize));
     gradient = !!setNew(gradient, _gradient);
     rainbow = !!setNew(rainbow, _rainbow);
+    random = !!setNew(random, _random);
     if (_colors !== null && _colors !== undefined) {
         setColors(_colors.split(','));
     }
@@ -95,6 +97,7 @@ function getMode() {
     result += n(slowness);
     result += n(partSize);
     result += gradient ? '1' : '0';
+    result += random ? '1' : '0';
     if (rainbow) {
         result += '-';
     } else {
@@ -169,6 +172,7 @@ app.get('/setMode', (req, res) => {
         req.query.partSize,
         req.query.gradient,
         req.query.rainbow,
+        req.query.random,
         req.query.colors
     );
     res.send(getMode());

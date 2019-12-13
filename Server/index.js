@@ -16,7 +16,7 @@ let colors = Array(colorsNum).fill('ffffff');
 
 function setColors(_colors) {
     for (let i = 0; i < colorsNum; i++) {
-        colors = _colors[i % _colors.length];
+        colors[i] = _colors[i % _colors.length];
     }
 }
 

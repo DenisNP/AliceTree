@@ -1,0 +1,4 @@
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=nodemcu-32s -G "CodeBlocks - MinGW Makefiles" D:\_DEV\_Arduino\AliceTree
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s

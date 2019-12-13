@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/FastLED.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/FastLED.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/bitswap.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/bitswap.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorpalettes.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorpalettes.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorutils.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorutils.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/hsv2rgb.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/hsv2rgb.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/lib8tion.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/lib8tion.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/noise.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/noise.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/platforms.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/platforms.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/power_mgt.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/power_mgt.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/.pio/libdeps/nodemcu-32s/FastLED_ID126/wiring.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/wiring.cpp.obj"
-  "D:/_DEV/_Arduino/AliceTree/src/tree.cpp" "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/src/tree.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/FastLED.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/FastLED.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/bitswap.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/bitswap.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorpalettes.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorpalettes.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorutils.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/colorutils.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/hsv2rgb.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/hsv2rgb.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/lib8tion.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/lib8tion.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/noise.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/noise.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/platforms.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/platforms.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/power_mgt.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/power_mgt.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/.pio/libdeps/nodemcu-32s/FastLED_ID126/wiring.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcu-32s/FastLED_ID126/wiring.cpp.obj"
+  "D:/_DEV/_Arduino/AliceTree/Arduino/src/tree.cpp" "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/src/tree.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

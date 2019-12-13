@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
 
-The C compiler identification is GNU, found in "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdC/a.exe"
+The C compiler identification is GNU, found in "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdC/a.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/MinGW/bin/g++.exe 
@@ -23,39 +23,39 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
 
-The CXX compiler identification is GNU, found in "D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdCXX/a.exe"
+The CXX compiler identification is GNU, found in "D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdCXX/a.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
+Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_f27ec/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f27ec.dir\build.make CMakeFiles/cmTC_f27ec.dir/build
-mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f27ec.dir/testCCompiler.c.obj
-C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_f27ec.dir\testCCompiler.c.obj   -c D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles\CMakeTmp\testCCompiler.c
-Linking C executable cmTC_f27ec.exe
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_f27ec.dir\link.txt --verbose=1
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_f27ec.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f27ec.dir/objects.a @CMakeFiles\cmTC_f27ec.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_f27ec.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f27ec.exe -Wl,--out-implib,libcmTC_f27ec.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f27ec.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_a01b9/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a01b9.dir\build.make CMakeFiles/cmTC_a01b9.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a01b9.dir/testCCompiler.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_a01b9.dir\testCCompiler.c.obj   -c D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_a01b9.exe
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_a01b9.dir\link.txt --verbose=1
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_a01b9.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a01b9.dir/objects.a @CMakeFiles\cmTC_a01b9.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_a01b9.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a01b9.exe -Wl,--out-implib,libcmTC_a01b9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a01b9.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
+Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_75103/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_75103.dir\build.make CMakeFiles/cmTC_75103.dir/build
-mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_75103.dir/CMakeCCompilerABI.c.obj
-C:\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj   -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_e142b/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e142b.dir\build.make CMakeFiles/cmTC_e142b.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e142b.dir/CMakeCCompilerABI.c.obj
+C:\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj   -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c
 Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs
 COLLECT_GCC=C:\MinGW\bin\gcc.exe
 Target: x86_64-w64-mingw32
 Configured with: ../gcc-4.8.3/configure --prefix=/opt/windows_64 --with-sysroot=/opt/windows_64 --libdir=/opt/windows_64/lib64 --mandir=/opt/windows_64/man --infodir=/opt/windows_64/info --enable-shared --disable-bootstrap --disable-multilib --enable-threads=posix --enable-languages=c,c++ --enable-checking=release --enable-libgomp --with-system-zlib --with-python-dir=/lib64/python2.7/site-packages --disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp --with-gnu-ld --verbose --enable-java-home --with-java-home=/opt/windows_64/lib64/jvm/jre --with-jvm-root-dir=/opt/windows_64/lib64/jvm --with-jvm-jar-dir=/opt/windows_64/lib64/jvm/jvm-exports --with-arch-directory=amd64 --with-antlr-jar='/home/adrien/projects/win-builds-1.5/slackware64-current/d/gcc/antlr-*.jar' --disable-java-awt --disable-gtktest --build=x86_64-slackware-linux --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
 Thread model: posix
 gcc version 4.8.3 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
- c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT -IC:/MinGW/include C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\DenisNP\AppData\Local\Temp\ccHYGVRX.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
+ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT -IC:/MinGW/include C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\DenisNP\AppData\Local\Temp\ccM793GM.s
 GNU C (GCC) version 4.8.3 (x86_64-w64-mingw32)
 	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -75,17 +75,17 @@ GNU C (GCC) version 4.8.3 (x86_64-w64-mingw32)
 	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 88950af95bccaa8c19f032b0ac36794b
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
- c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj C:\Users\DenisNP\AppData\Local\Temp\ccHYGVRX.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
+ c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj C:\Users\DenisNP\AppData\Local\Temp\ccM793GM.s
 GNU assembler version 2.24 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.24
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../lib64/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_75103.exe
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_75103.dir\link.txt --verbose=1
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_75103.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_75103.dir/objects.a @CMakeFiles\cmTC_75103.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_75103.dir/objects.a -Wl,--no-whole-archive  -o cmTC_75103.exe -Wl,--out-implib,libcmTC_75103.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_e142b.exe
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_e142b.dir\link.txt --verbose=1
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_e142b.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e142b.dir/objects.a @CMakeFiles\cmTC_e142b.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_e142b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e142b.exe -Wl,--out-implib,libcmTC_e142b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs
 COLLECT_GCC=C:\MinGW\bin\gcc.exe
 COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/lto-wrapper.exe
@@ -95,9 +95,9 @@ Thread model: posix
 gcc version 4.8.3 (GCC) 
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../lib64/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_75103.exe' '-mtune=generic' '-march=x86-64'
- c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_75103.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_75103.dir/objects.a --no-whole-archive --out-implib libcmTC_75103.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o
-mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e142b.exe' '-mtune=generic' '-march=x86-64'
+ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_e142b.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_e142b.dir/objects.a --no-whole-archive --out-implib libcmTC_e142b.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o
+mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
 
 
 
@@ -118,20 +118,20 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_75103/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_75103.dir\build.make CMakeFiles/cmTC_75103.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_75103.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj   -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_e142b/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e142b.dir\build.make CMakeFiles/cmTC_e142b.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e142b.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [C:\MinGW\bin\gcc.exe   -v -o CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj   -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c]
   ignore line: [Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\gcc.exe]
   ignore line: [Target: x86_64-w64-mingw32]
   ignore line: [Configured with: ../gcc-4.8.3/configure --prefix=/opt/windows_64 --with-sysroot=/opt/windows_64 --libdir=/opt/windows_64/lib64 --mandir=/opt/windows_64/man --infodir=/opt/windows_64/info --enable-shared --disable-bootstrap --disable-multilib --enable-threads=posix --enable-languages=c,c++ --enable-checking=release --enable-libgomp --with-system-zlib --with-python-dir=/lib64/python2.7/site-packages --disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp --with-gnu-ld --verbose --enable-java-home --with-java-home=/opt/windows_64/lib64/jvm/jre --with-jvm-root-dir=/opt/windows_64/lib64/jvm --with-jvm-jar-dir=/opt/windows_64/lib64/jvm/jvm-exports --with-arch-directory=amd64 --with-antlr-jar='/home/adrien/projects/win-builds-1.5/slackware64-current/d/gcc/antlr-*.jar' --disable-java-awt --disable-gtktest --build=x86_64-slackware-linux --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 4.8.3 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT -IC:/MinGW/include C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\DenisNP\AppData\Local\Temp\ccHYGVRX.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT -IC:/MinGW/include C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj -version -o C:\Users\DenisNP\AppData\Local\Temp\ccM793GM.s]
   ignore line: [GNU C (GCC) version 4.8.3 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -151,8 +151,8 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 88950af95bccaa8c19f032b0ac36794b]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj C:\Users\DenisNP\AppData\Local\Temp\ccHYGVRX.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj C:\Users\DenisNP\AppData\Local\Temp\ccM793GM.s]
   ignore line: [GNU assembler version 2.24 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.24]
   ignore line: [COMPILER_PATH=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/]
   ignore line: [c:/mingw/bin/../libexec/gcc/]
@@ -161,12 +161,12 @@ Parsed C implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib64/gcc/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_75103.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_75103.exe]
-  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_75103.dir\link.txt --verbose=1]
-  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_75103.dir/objects.a]
-  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_75103.dir/objects.a @CMakeFiles\cmTC_75103.dir\objects1.rsp]
-  ignore line: [C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_75103.dir/objects.a -Wl,--no-whole-archive  -o cmTC_75103.exe -Wl,--out-implib,libcmTC_75103.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_e142b.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_e142b.exe]
+  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_e142b.dir\link.txt --verbose=1]
+  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_e142b.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e142b.dir/objects.a @CMakeFiles\cmTC_e142b.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_e142b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e142b.exe -Wl,--out-implib,libcmTC_e142b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/lto-wrapper.exe]
@@ -181,15 +181,15 @@ Parsed C implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib64/gcc/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_75103.exe' '-mtune=generic' '-march=x86-64']
-  link line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_75103.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_75103.dir/objects.a --no-whole-archive --out-implib libcmTC_75103.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e142b.exe' '-mtune=generic' '-march=x86-64']
+  link line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_e142b.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_e142b.dir/objects.a --no-whole-archive --out-implib libcmTC_e142b.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o]
     arg [c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe] ==> ignore
     arg [--sysroot=/opt/windows_64] ==> ignore
     arg [-m] ==> ignore
     arg [i386pep] ==> ignore
     arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_75103.exe] ==> ignore
+    arg [cmTC_e142b.exe] ==> ignore
     arg [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> ignore
     arg [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o] ==> ignore
     arg [-Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3] ==> dir [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3]
@@ -197,10 +197,10 @@ Parsed C implicit link information from above output:
     arg [-Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib]
     arg [-Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib] ==> dir [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_75103.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_e142b.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_75103.dll.a] ==> ignore
+    arg [libcmTC_e142b.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -239,36 +239,36 @@ Parsed C implicit link information from above output:
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
+Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_5024d/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5024d.dir\build.make CMakeFiles/cmTC_5024d.dir/build
-mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5024d.dir/testCXXCompiler.cxx.obj
-C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_5024d.dir\testCXXCompiler.cxx.obj -c D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-Linking CXX executable cmTC_5024d.exe
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_5024d.dir\link.txt --verbose=1
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_5024d.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_5024d.dir/objects.a @CMakeFiles\cmTC_5024d.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_5024d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5024d.exe -Wl,--out-implib,libcmTC_5024d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5024d.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_e0371/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e0371.dir\build.make CMakeFiles/cmTC_e0371.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e0371.dir/testCXXCompiler.cxx.obj
+C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_e0371.dir\testCXXCompiler.cxx.obj -c D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTC_e0371.exe
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_e0371.dir\link.txt --verbose=1
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_e0371.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e0371.dir/objects.a @CMakeFiles\cmTC_e0371.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_e0371.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e0371.exe -Wl,--out-implib,libcmTC_e0371.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_e0371.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
+Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_05643/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_05643.dir\build.make CMakeFiles/cmTC_05643.dir/build
-mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_05643.dir/CMakeCXXCompilerABI.cpp.obj
-C:\MinGW\bin\g++.exe    -v -o CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_eb411/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_eb411.dir\build.make CMakeFiles/cmTC_eb411.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eb411.dir/CMakeCXXCompilerABI.cpp.obj
+C:\MinGW\bin\g++.exe    -v -o CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp
 Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs
 COLLECT_GCC=C:\MinGW\bin\g++.exe
 Target: x86_64-w64-mingw32
 Configured with: ../gcc-4.8.3/configure --prefix=/opt/windows_64 --with-sysroot=/opt/windows_64 --libdir=/opt/windows_64/lib64 --mandir=/opt/windows_64/man --infodir=/opt/windows_64/info --enable-shared --disable-bootstrap --disable-multilib --enable-threads=posix --enable-languages=c,c++ --enable-checking=release --enable-libgomp --with-system-zlib --with-python-dir=/lib64/python2.7/site-packages --disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp --with-gnu-ld --verbose --enable-java-home --with-java-home=/opt/windows_64/lib64/jvm/jre --with-jvm-root-dir=/opt/windows_64/lib64/jvm --with-jvm-jar-dir=/opt/windows_64/lib64/jvm/jvm-exports --with-arch-directory=amd64 --with-antlr-jar='/home/adrien/projects/win-builds-1.5/slackware64-current/d/gcc/antlr-*.jar' --disable-java-awt --disable-gtktest --build=x86_64-slackware-linux --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32
 Thread model: posix
 gcc version 4.8.3 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1plus.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj -version -IC:/MinGW/include -o C:\Users\DenisNP\AppData\Local\Temp\ccRyuahg.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1plus.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj -version -IC:/MinGW/include -o C:\Users\DenisNP\AppData\Local\Temp\cc3HefsM.s
 GNU C++ (GCC) version 4.8.3 (x86_64-w64-mingw32)
 	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -294,17 +294,17 @@ GNU C++ (GCC) version 4.8.3 (x86_64-w64-mingw32)
 	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 15bc2280f1f960278f1605b7e71f9a00
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\DenisNP\AppData\Local\Temp\ccRyuahg.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\DenisNP\AppData\Local\Temp\cc3HefsM.s
 GNU assembler version 2.24 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.24
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../lib64/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_05643.exe
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_05643.dir\link.txt --verbose=1
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_05643.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_05643.dir/objects.a @CMakeFiles\cmTC_05643.dir\objects1.rsp
-C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_05643.dir/objects.a -Wl,--no-whole-archive  -o cmTC_05643.exe -Wl,--out-implib,libcmTC_05643.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_eb411.exe
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_eb411.dir\link.txt --verbose=1
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_eb411.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_eb411.dir/objects.a @CMakeFiles\cmTC_eb411.dir\objects1.rsp
+C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_eb411.dir/objects.a -Wl,--no-whole-archive  -o cmTC_eb411.exe -Wl,--out-implib,libcmTC_eb411.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs
 COLLECT_GCC=C:\MinGW\bin\g++.exe
 COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/lto-wrapper.exe
@@ -314,9 +314,9 @@ Thread model: posix
 gcc version 4.8.3 (GCC) 
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/;c:/mingw/bin/../lib64/gcc/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/;c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_05643.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_05643.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_05643.dir/objects.a --no-whole-archive --out-implib libcmTC_05643.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o
-mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb411.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_eb411.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_eb411.dir/objects.a --no-whole-archive --out-implib libcmTC_eb411.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o
+mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
 
 
 
@@ -343,20 +343,20 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_05643/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_05643.dir\build.make CMakeFiles/cmTC_05643.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_05643.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [C:\MinGW\bin\g++.exe    -v -o CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_eb411/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_eb411.dir\build.make CMakeFiles/cmTC_eb411.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_eb411.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [C:\MinGW\bin\g++.exe    -v -o CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj -c C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp]
   ignore line: [Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\g++.exe]
   ignore line: [Target: x86_64-w64-mingw32]
   ignore line: [Configured with: ../gcc-4.8.3/configure --prefix=/opt/windows_64 --with-sysroot=/opt/windows_64 --libdir=/opt/windows_64/lib64 --mandir=/opt/windows_64/man --infodir=/opt/windows_64/info --enable-shared --disable-bootstrap --disable-multilib --enable-threads=posix --enable-languages=c,c++ --enable-checking=release --enable-libgomp --with-system-zlib --with-python-dir=/lib64/python2.7/site-packages --disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp --with-gnu-ld --verbose --enable-java-home --with-java-home=/opt/windows_64/lib64/jvm/jre --with-jvm-root-dir=/opt/windows_64/lib64/jvm --with-jvm-jar-dir=/opt/windows_64/lib64/jvm/jvm-exports --with-arch-directory=amd64 --with-antlr-jar='/home/adrien/projects/win-builds-1.5/slackware64-current/d/gcc/antlr-*.jar' --disable-java-awt --disable-gtktest --build=x86_64-slackware-linux --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 4.8.3 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1plus.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj -version -IC:/MinGW/include -o C:\Users\DenisNP\AppData\Local\Temp\ccRyuahg.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/cc1plus.exe -quiet -v -iprefix c:\mingw\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/ -D_REENTRANT C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\share\cmake-3.15\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj -version -IC:/MinGW/include -o C:\Users\DenisNP\AppData\Local\Temp\cc3HefsM.s]
   ignore line: [GNU C++ (GCC) version 4.8.3 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -382,8 +382,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [	compiled by GNU C version 4.8.3, GMP version 5.1.3, MPFR version 3.1.2, MPC version 0.8.2]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 15bc2280f1f960278f1605b7e71f9a00]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\DenisNP\AppData\Local\Temp\ccRyuahg.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\DenisNP\AppData\Local\Temp\cc3HefsM.s]
   ignore line: [GNU assembler version 2.24 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.24]
   ignore line: [COMPILER_PATH=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/]
   ignore line: [c:/mingw/bin/../libexec/gcc/]
@@ -392,12 +392,12 @@ Parsed CXX implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib64/gcc/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_05643.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_05643.exe]
-  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_05643.dir\link.txt --verbose=1]
-  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_05643.dir/objects.a]
-  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_05643.dir/objects.a @CMakeFiles\cmTC_05643.dir\objects1.rsp]
-  ignore line: [C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_05643.dir/objects.a -Wl,--no-whole-archive  -o cmTC_05643.exe -Wl,--out-implib,libcmTC_05643.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_eb411.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_eb411.exe]
+  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_eb411.dir\link.txt --verbose=1]
+  ignore line: [C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_eb411.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_eb411.dir/objects.a @CMakeFiles\cmTC_eb411.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_eb411.dir/objects.a -Wl,--no-whole-archive  -o cmTC_eb411.exe -Wl,--out-implib,libcmTC_eb411.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Reading specs from c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/specs]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\g++.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/lto-wrapper.exe]
@@ -412,15 +412,15 @@ Parsed CXX implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib64/gcc/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/]
   ignore line: [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_05643.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_05643.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_05643.dir/objects.a --no-whole-archive --out-implib libcmTC_05643.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb411.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe --sysroot=/opt/windows_64 -m i386pep -Bdynamic -o cmTC_eb411.exe c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3 -Lc:/mingw/bin/../lib64/gcc -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib -Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib --whole-archive CMakeFiles\cmTC_eb411.dir/objects.a --no-whole-archive --out-implib libcmTC_eb411.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -LC:/MinGW/lib64 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtend.o]
     arg [c:/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/4.8.3/collect2.exe] ==> ignore
     arg [--sysroot=/opt/windows_64] ==> ignore
     arg [-m] ==> ignore
     arg [i386pep] ==> ignore
     arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_05643.exe] ==> ignore
+    arg [cmTC_eb411.exe] ==> ignore
     arg [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> ignore
     arg [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib/crtbegin.o] ==> ignore
     arg [-Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3] ==> dir [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3]
@@ -428,10 +428,10 @@ Parsed CXX implicit link information from above output:
     arg [-Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib/../lib]
     arg [-Lc:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib] ==> dir [c:/mingw/bin/../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/lib]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_05643.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_eb411.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_05643.dll.a] ==> ignore
+    arg [libcmTC_eb411.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -471,18 +471,18 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1y] compiler features compiled with the following output:
-Change Dir: D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
+Change Dir: D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_e6e51/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_e6e51.dir\build.make CMakeFiles/cmTC_e6e51.dir/build
-mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e6e51.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe    -std=c++1y -o CMakeFiles\cmTC_e6e51.dir\feature_tests.cxx.obj -c D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_e6e51.exe
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_e6e51.dir\link.txt --verbose=1
-C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_e6e51.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_e6e51.dir/objects.a @CMakeFiles\cmTC_e6e51.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_e6e51.dir/objects.a -Wl,--no-whole-archive  -o cmTC_e6e51.exe -Wl,--out-implib,libcmTC_e6e51.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_e6e51.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe cmTC_c6a60/fast && C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_c6a60.dir\build.make CMakeFiles/cmTC_c6a60.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c6a60.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++1y -o CMakeFiles\cmTC_c6a60.dir\feature_tests.cxx.obj -c D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_c6a60.exe
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_c6a60.dir\link.txt --verbose=1
+C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.144\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\cmTC_c6a60.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_c6a60.dir/objects.a @CMakeFiles\cmTC_c6a60.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_c6a60.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c6a60.exe -Wl,--out-implib,libcmTC_c6a60.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_c6a60.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'D:/_DEV/_Arduino/AliceTree/Arduino/cmake-build-nodemcu-32s/CMakeFiles/CMakeTmp'
 
 
 

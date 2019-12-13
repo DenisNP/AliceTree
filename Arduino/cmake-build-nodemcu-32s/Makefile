@@ -47,10 +47,10 @@ RM = C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.1
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\_DEV\_Arduino\AliceTree
+CMAKE_SOURCE_DIR = D:\_DEV\_Arduino\AliceTree\Arduino
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s
+CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

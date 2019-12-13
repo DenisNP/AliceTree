@@ -42,10 +42,10 @@ RM = C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.1
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\_DEV\_Arduino\AliceTree
+CMAKE_SOURCE_DIR = D:\_DEV\_Arduino\AliceTree\Arduino
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s
+CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s
 
 # Utility rule file for PLATFORMIO_DEVICE_LIST.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s
 include CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/progress.make
 
 CMakeFiles/PLATFORMIO_DEVICE_LIST:
-	cd /d D:\_DEV\_Arduino\AliceTree && platformio -f -c clion device list
+	cd /d D:\_DEV\_Arduino\AliceTree\Arduino && platformio -f -c clion device list
 
 PLATFORMIO_DEVICE_LIST: CMakeFiles/PLATFORMIO_DEVICE_LIST
 PLATFORMIO_DEVICE_LIST: CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/build.make
@@ -70,6 +70,6 @@ CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/clean:
 .PHONY : CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/clean
 
 CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\_DEV\_Arduino\AliceTree D:\_DEV\_Arduino\AliceTree D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles\PLATFORMIO_DEVICE_LIST.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\_DEV\_Arduino\AliceTree\Arduino D:\_DEV\_Arduino\AliceTree\Arduino D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles\PLATFORMIO_DEVICE_LIST.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/depend
 

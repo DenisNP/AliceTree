@@ -42,10 +42,10 @@ RM = C:\Users\DenisNP\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.5233.1
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\_DEV\_Arduino\AliceTree
+CMAKE_SOURCE_DIR = D:\_DEV\_Arduino\AliceTree\Arduino
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s
+CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s
 
 # Utility rule file for PLATFORMIO_REBUILD_PROJECT_INDEX.
 
@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s
 include CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/progress.make
 
 CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX:
-	cd /d D:\_DEV\_Arduino\AliceTree && platformio -f -c clion init --ide clion
+	cd /d D:\_DEV\_Arduino\AliceTree\Arduino && platformio -f -c clion init --ide clion
 
 PLATFORMIO_REBUILD_PROJECT_INDEX: CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX
 PLATFORMIO_REBUILD_PROJECT_INDEX: CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/build.make
@@ -70,6 +70,6 @@ CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/clean:
 .PHONY : CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/clean
 
 CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\_DEV\_Arduino\AliceTree D:\_DEV\_Arduino\AliceTree D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\cmake-build-nodemcu-32s\CMakeFiles\PLATFORMIO_REBUILD_PROJECT_INDEX.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\_DEV\_Arduino\AliceTree\Arduino D:\_DEV\_Arduino\AliceTree\Arduino D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s D:\_DEV\_Arduino\AliceTree\Arduino\cmake-build-nodemcu-32s\CMakeFiles\PLATFORMIO_REBUILD_PROJECT_INDEX.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/depend
 

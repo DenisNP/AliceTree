@@ -2,22 +2,22 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="AliceTree" targetName="PLATFORMIO_UPLOAD" />
       <config projectName="AliceTree" targetName="PLATFORMIO_PROGRAM" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_UPDATE_ALL" />
-      <config projectName="AliceTree" targetName="AliceTree" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_CLEAN" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_TEST" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_DEVICE_LIST" />
-      <config projectName="AliceTree" targetName="Z_DUMMY_TARGET" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_MONITOR" />
-      <config projectName="AliceTree" targetName="PLATFORMIO" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_REBUILD_PROJECT_INDEX" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_BUILD_VERBOSE" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_UPLOADFS" />
-      <config projectName="AliceTree" targetName="DEBUG" />
-      <config projectName="AliceTree" targetName="PLATFORMIO_BUILD_DEBUG" />
       <config projectName="AliceTree" targetName="PLATFORMIO_BUILD" />
+      <config projectName="AliceTree" targetName="DEBUG" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_DEVICE_LIST" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_TEST" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_UPLOADFS" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_REBUILD_PROJECT_INDEX" />
+      <config projectName="AliceTree" targetName="Z_DUMMY_TARGET" />
+      <config projectName="AliceTree" targetName="AliceTree" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_MONITOR" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_UPLOAD" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_CLEAN" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_UPDATE_ALL" />
+      <config projectName="AliceTree" targetName="PLATFORMIO" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_BUILD_DEBUG" />
+      <config projectName="AliceTree" targetName="PLATFORMIO_BUILD_VERBOSE" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -26,7 +26,45 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec922180-b3d3-40f1-af0b-2568113a9075" name="Default" comment="" />
+    <list default="true" id="ec922180-b3d3-40f1-af0b-2568113a9075" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/AliceTree.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/AliceTree.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/AliceTree.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/3.15.3/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD_DEBUG.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD_DEBUG.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD_VERBOSE.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_BUILD_VERBOSE.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_CLEAN.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_CLEAN.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_DEVICE_LIST.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_MONITOR.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_MONITOR.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_PROGRAM.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_PROGRAM.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_TEST.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_TEST.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPLOAD.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPLOAD.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPLOADFS.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/PLATFORMIO_UPLOADFS.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/Z_DUMMY_TARGET.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-nodemcu-32s/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-nodemcu-32s/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +79,9 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:nodemcu-32s" />
   <component name="FavoritesManager">
     <favorites_list name="AliceTree" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
@@ -63,6 +104,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -71,14 +113,15 @@
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/platformio.ini" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="CMake Application.PLATFORMIO_BUILD">
+  <component name="RunManager" selected="CMake Application.PLATFORMIO_UPLOAD">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -199,6 +242,7 @@
       <workItem from="1576117224479" duration="12000" />
       <workItem from="1576186668921" duration="11919000" />
       <workItem from="1576204667469" duration="1610000" />
+      <workItem from="1576263449189" duration="764000" />
     </task>
     <servers />
   </component>

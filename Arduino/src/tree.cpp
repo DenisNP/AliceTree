@@ -147,7 +147,7 @@ void setMode(const String& s) {
     // rainbow special mode
     if (s.substring(7, 8) == "-") {
         rainbow = true;
-        partSize = max(1, partSize / 8);
+        partSize = max(1, partSize * 10 / 8);
         return;
     }
 

@@ -102,7 +102,8 @@ void loadMode(unsigned long time) {
                 if (httpCode == HTTP_CODE_OK) {
                     String payload = http.getString();
                     Serial.println(payload);
-
+                    Serial.println("");
+                    Serial.println("...setting mode...");
                     setMode(payload);
                 }
             } else {
@@ -144,10 +145,18 @@ void setMode(const String& s) {
     // random
     isRandom = s.substring(6, 7) == "1";
 
+    // log
+    Serial.print("new code: "); Serial.println(code);
+    Serial.print("slowness: "); Serial.println(slowness);
+    Serial.print("partSize: "); Serial.println(partSize);
+    Serial.print("gradient: "); Serial.println(gradient);
+    Serial.print("isRandom: "); Serial.println(isRandom);
+
     // rainbow special mode
     if (s.substring(7, 8) == "-") {
         rainbow = true;
         partSize = max(1, partSize * 10 / 8);
+        Serial.print("rainbow : "); Serial.println(partSize);
         return;
     }
 
@@ -159,10 +168,13 @@ void setMode(const String& s) {
         unsigned int cLen = cStr.length();
         if (cLen == 2 && lastLed < NUM_COLORS) {
             colors[lastLed][lastColor] = hexToLong(cStr);
+            Serial.println(colors[lastLed][lastColor]);
             lastColor = ++lastColor % 3;
             cStr = "";
         }
     }
+
+    Serial.println("");
 }
 
 void animateStep() {

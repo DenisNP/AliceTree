@@ -1,8 +1,10 @@
 /* eslint-disable no-console */
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // main params
 const colorsNum = 24;
@@ -44,6 +46,14 @@ function getMode() {
     return result;
 }
 
+// handle request
+app.post('/changeColor', (req, res) => {
+    const command = (req.body.value1 || '').toLowerCase().split(' ');
+    console.log(command);
+    res.send('');
+});
+
+// set mode manual
 app.get('/setMode', (req, res) => {
     setMode(
         req.query.slowness,
@@ -74,6 +84,18 @@ function setNew(sourceVal, newVal) {
         return newVal;
     }
     return sourceVal;
+}
+
+function hasKeywords(command, keywords) {
+    const words = command.split(' ');
+    for (let keyword of keywords) {
+        for (word of words) {
+            if (word.startsWith(keyword)) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

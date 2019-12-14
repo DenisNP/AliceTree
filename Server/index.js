@@ -157,7 +157,7 @@ app.post('/changeColor', (req, res) => {
     gradient = hasKeywords(command, ['градиент', 'перелив']);
 
     // random
-    random = hasKeywords(command, ['случайн', 'перемеш', 'хаотич', 'рандом', 'вразнобой', 'разнобой', 'беспоряд']);
+    random = hasKeywords(command, ['случайн', 'перемеш', 'вперемеш', 'хаотич', 'рандом', 'вразнобой', 'разнобой', 'беспоряд']);
 
     code = ++code % 10;
     console.log('new mode set: ' + getMode());

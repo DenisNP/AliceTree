@@ -205,20 +205,22 @@ void animateStep() {
         }
     }
 
-    speedStep++;
-    if (speedStep >= slowness) {
-        unsigned int colorLimit = currentNumColors * partSize;
-        if (isRandom) {
-            // random jump
-            step = (step + random((int)partSize, (int)colorLimit)) % colorLimit;
-        } else if (gradient) {
-            // next color stop
-            step = (step + partSize) % colorLimit;
-        } else {
-            // next animation step
-            step = (step + 1) % colorLimit;
+    if (slowness > 0) {
+        speedStep++;
+        if (speedStep >= slowness) {
+            unsigned int colorLimit = currentNumColors * partSize;
+            if (isRandom) {
+                // random jump
+                step = (step + random((int) partSize, (int) colorLimit)) % colorLimit;
+            } else if (gradient) {
+                // next color stop
+                step = (step + partSize) % colorLimit;
+            } else {
+                // next animation step
+                step = (step + 1) % colorLimit;
+            }
+            speedStep = 0;
         }
-        speedStep = 0;
     }
 }
 

@@ -88,6 +88,8 @@ app.post('/changeColor', (req, res) => {
         slowness = 1;
     } else if (utils.hasKeywords(command, constants.kwSlow)) {
         slowness = 10;
+    } else if (utils.hasKeywords(command, constants.kwStatic)){
+        slowness = 0;
     } else {
         slowness = 5;
     }

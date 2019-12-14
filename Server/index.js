@@ -89,7 +89,7 @@ function setMode(_slowness, _partSize, _gradient, _rainbow, _random, _colors) {
     if (_colors !== null && _colors !== undefined) {
         setColors(_colors.split(','));
     }
-    code = ++code % 10;
+    code = (code + 1) % 10;
 }
 
 function getMode() {
@@ -159,7 +159,7 @@ app.post('/changeColor', (req, res) => {
     // random
     random = hasKeywords(command, ['случайн', 'перемеш', 'вперемеш', 'хаотич', 'рандом', 'вразнобой', 'разнобой', 'беспоряд']);
 
-    code = ++code % 10;
+    code = (code + 1) % 10;
     console.log('new mode set: ' + getMode());
     res.send('');
 });

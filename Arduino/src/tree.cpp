@@ -7,7 +7,7 @@
 // wifi
 const char* ssid     = "Spider";
 const char* password = "12345679";
-const char* server = "http://my-alicetree-server/mode"; // CHANGE TO YOURS!!!
+const char* server = "http://alicetree.server/mode"; // CHANGE TO YOURS!!!
 WiFiMulti wifiMulti;
 
 // led
@@ -44,6 +44,7 @@ int mixColors(int color1, int color2, float ratio);
 
 void setup() {
     Serial.begin(115200);
+    Serial.println("Loaded.");
 
     FastLED.addLeds<WS2811, LED_PIN, GRB>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
     FastLED.setBrightness(BRIGHTNESS);
@@ -169,7 +170,7 @@ void setMode(const String& s) {
         if (cLen == 2 && lastLed < NUM_COLORS) {
             colors[lastLed][lastColor] = hexToLong(cStr);
             Serial.println(colors[lastLed][lastColor]);
-            lastColor = ++lastColor % 3;
+            lastColor = (lastColor + 1) % 3;
             cStr = "";
         }
     }
@@ -215,7 +216,7 @@ void animateStep() {
             step = (step + partSize) % colorLimit;
         } else {
             // next animation step
-            step = ++step % colorLimit;
+            step = (step + 1) % colorLimit;
         }
         speedStep = 0;
     }

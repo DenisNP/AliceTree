@@ -7,13 +7,16 @@
 // wifi
 const char* ssid     = "Spider";
 const char* password = "12345679";
-const char* server = "http://alicetree.justanother.app/mode"; // CHANGE TO YOURS!!!
+const char* server = "http://alicetree.server/mode"; // CHANGE TO YOURS!!!
 WiFiMulti wifiMulti;
 
-// led
+// settings
 #define NUM_LEDS 130
 #define BRIGHTNESS 100
 #define LED_PIN 13
+#define SPEED_COEFF 5
+
+// led
 CRGB leds[NUM_LEDS];
 byte currentLeds[NUM_LEDS][3];
 
@@ -77,9 +80,11 @@ void loop() {
 
     FastLED.clear();
     if (code < 10) {
-        animateStep();
+        for (int s = 0; s < SPEED_COEFF; s++) {
+            animateStep();
+        }
     } else {
-        // set white
+        // turn off
     }
     saveLeds();
     FastLED.show();

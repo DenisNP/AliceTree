@@ -7,14 +7,15 @@
 // wifi
 const char* ssid     = "Spider";
 const char* password = "12345679";
-const char* server = "http://alicetree.server/mode"; // CHANGE TO YOURS!!!
+const char* server = "http://alicetree.justanother.app/mode"; // CHANGE TO YOURS!!!
 WiFiMulti wifiMulti;
 
 // led
 #define NUM_LEDS 130
-#define BRIGHTNESS 200
+#define BRIGHTNESS 100
 #define LED_PIN 13
 CRGB leds[NUM_LEDS];
+byte currentLeds[NUM_LEDS][3];
 
 // colors
 #define NUM_COLORS 24
@@ -39,6 +40,7 @@ unsigned long lastLoaded = 0;
 void setMode(const String& s);
 void loadMode(unsigned long time);
 void animateStep();
+void saveLeds();
 long hexToLong(const String& s);
 int mixColors(int color1, int color2, float ratio);
 
@@ -46,8 +48,18 @@ void setup() {
     Serial.begin(115200);
     Serial.println("Loaded.");
 
+    pinMode(LED_PIN, OUTPUT);
     FastLED.addLeds<WS2811, LED_PIN, GRB>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
     FastLED.setBrightness(BRIGHTNESS);
+
+    FastLED.clear();
+    int hue = 0;
+    for (int i = 0; i < NUM_LEDS; i++) {
+        leds[i].setHSV(hue++ % 255, 255, 255);
+    }
+    saveLeds();
+    FastLED.show();
+    delay(3000);
 
     wifiMulti.addAP(ssid, password);
 }
@@ -68,10 +80,8 @@ void loop() {
         animateStep();
     } else {
         // set white
-        for(int i = 0; i < NUM_LEDS; i++) {
-            leds[i].setRGB(255, 255, 255);
-        }
     }
+    saveLeds();
     FastLED.show();
 
     unsigned long after = millis();
@@ -156,7 +166,7 @@ void setMode(const String& s) {
     // rainbow special mode
     if (s.substring(7, 8) == "-") {
         rainbow = true;
-        partSize = max(1, partSize * 10 / 8);
+        partSize = max(1, partSize / 8);
         Serial.print("rainbow : "); Serial.println(partSize);
         return;
     }
@@ -179,30 +189,41 @@ void setMode(const String& s) {
 }
 
 void animateStep() {
-    unsigned int currentNumColors = rainbow ? 36 : NUM_COLORS;
+    unsigned int currentNumColors = rainbow ? 255 : NUM_COLORS;
 
     for (int i = 0; i < NUM_LEDS; i++) {
-        int color = floor(((double)step + i) / currentNumColors);
+        int color = floor((double)(step + i) / partSize);
+        int new_r;
+        int new_g;
+        int new_b;
 
         if (rainbow) {
-            leds[i].setHSV(color * 10, 100, 100);
+            leds[i].setHSV(color, 255, 255);
+            // use FastLED's HSV->RBG converter
+            new_r = leds[i].r;
+            new_g = leds[i].g;
+            new_b = leds[i].b;
         } else {
             // softly mix with next near the end
-            int stepsToNext = partSize / 3;
-            int inColorStep = min(stepsToNext, partSize - color % partSize);
-            unsigned int nextColor = floor(((double)step + i + partSize) / currentNumColors);
+            int stepsToNext = partSize / 2;
+            int inColorStep = min(stepsToNext, partSize - ((int)step + i) % partSize);
+            unsigned int nextColor = floor((double)(step + i + partSize) / partSize);
             float mixRatio = (float)inColorStep / (float)stepsToNext;
 
             // set colors
-            int new_r = mixColors(colors[color][0], colors[nextColor][0], mixRatio);
-            int new_g = mixColors(colors[color][1], colors[nextColor][1], mixRatio);
-            int new_b = mixColors(colors[color][2], colors[nextColor][2], mixRatio);
-            float coeff = gradient ? 0.6 : 1.0;
-
-            leds[i].r += round(((double)new_r - leds[i].r) * coeff);
-            leds[i].g += round(((double)new_g - leds[i].g) * coeff);
-            leds[i].b += round(((double)new_b - leds[i].b) * coeff);
+            new_r = mixColors(colors[color][0], colors[nextColor][0], mixRatio);
+            new_g = mixColors(colors[color][1], colors[nextColor][1], mixRatio);
+            new_b = mixColors(colors[color][2], colors[nextColor][2], mixRatio);
         }
+
+        float coeff = 1.0;
+        if (gradient) {
+            coeff = (float)(1.0 - ((float)max(1, min(10, (int)slowness)) - 1.0) / 9.0 * 0.5);
+        }
+
+        leds[i].r += round(((double)new_r - leds[i].r) * coeff);
+        leds[i].g += round(((double)new_g - leds[i].g) * coeff);
+        leds[i].b += round(((double)new_b - leds[i].b) * coeff);
     }
 
     if (slowness > 0) {
@@ -224,6 +245,14 @@ void animateStep() {
     }
 }
 
+void saveLeds() {
+    for (int i = 0; i < NUM_LEDS; i++) {
+        currentLeds[i][0] = leds[i].r;
+        currentLeds[i][1] = leds[i].g;
+        currentLeds[i][2] = leds[i].b;
+    }
+}
+
 long hexToLong(const String& s){
     char c[s.length() + 1];
     s.toCharArray(c, s.length() + 1);
@@ -231,5 +260,5 @@ long hexToLong(const String& s){
 }
 
 int mixColors(int color1, int color2, float ratio) {
-    return (int)round(ratio * (double)color1 + (1.0 - ratio * (double)color2));
+    return (int)round(ratio * (double)color1 + (1.0 - ratio) * (double)color2);
 }

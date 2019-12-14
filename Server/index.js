@@ -42,15 +42,27 @@ function getMode() {
     return result;
 }
 
+function newCode() {
+    code = (code + 1) % 10;
+}
+
 // handle request
-app.post('/changeColor', (req, res) => {
+app.post('/setMode', (req, res) => {
     const command = (req.body.value1 || '').toLowerCase().split(' ');
 
     // gradient
-    gradient = utils.hasKeywords(command, constants.kwGradient);
+    if (utils.hasKeywords(command, constants.kwGradient)) {
+        gradient = true;
+    } else if (utils.hasKeywords(command, constants.kwNonGradient)) {
+        gradient = false;
+    }
     
     // random
-    random = utils.hasKeywords(command, constants.kwRandom);
+    if (utils.hasKeywords(command, constants.kwRandom)) {
+        random = true;
+    } else if (utils.hasKeywords(command, constants.kwNonRandom)) {
+        random = false;
+    }
 
     // noise
     noise = random || utils.hasKeywords(command, constants.kwNoise);
@@ -61,22 +73,14 @@ app.post('/changeColor', (req, res) => {
     } else {
         rainbow = false;
         // fill colors array
-        const newColors = [];
-        for (colorCode of colorCodes) {
-            if (utils.hasKeywords(command, colorCode[0])) {
-                newColors.push(colorCode[1]);
-            }
-        }
+        const newColors = extractColors(constants.colorCodes, command);
         // shuffle if random
         if (random) {
             utils.shuffle(newColors);
         }
         // special case for black, alternate black with colors
         if (utils.hasKeywords(command, constants.kwBlack)) {
-            let len = newColors.length;
-            while (len > 0) {
-                newColors.splice(len--, 0, String('000000'));
-            }
+            utils.insertAlternating(newColors, '000000');
         }
         if (newColors.length > 0) {
             setColors(newColors);
@@ -90,7 +94,7 @@ app.post('/changeColor', (req, res) => {
         slowness = 10;
     } else if (utils.hasKeywords(command, constants.kwStatic)){
         slowness = 0;
-    } else {
+    } else if (utils.hasKeywords(command, constants.kwMedium)) {
         slowness = 5;
     }
     
@@ -107,13 +111,59 @@ app.post('/changeColor', (req, res) => {
         partSize = 0;
     }
     
-    code = (code + 1) % 10;
+    newCode();
     console.log('new mode set: ' + getMode());
     res.send('');
 });
 
+// add colors
+app.post('/addColors', (req, res) => {
+    const command = (req.body.value1 || '').toLowerCase().split(' ');
+    const addColors = extractColors(constants.colorCodes, command);
+    const hasBlackToAdd = utils.hasKeywords(command, constants.kwBlack);
+    const hadBlackInitial = colors.find(c => c === '000000') !== null;
+
+    const wasNonBlackColors = utils.getNonBlack(colors);
+    const newColors = wasNonBlackColors.concat(addColors);
+    if (random) {
+        utils.shuffle(newColors);
+    }
+
+    if (hasBlackToAdd || hadBlackInitial) {
+        utils.insertAlternating(newColors, '000000');
+    }
+
+    setColors(newColors);
+    newCode();
+    console.log('new colors added: ' + getMode());
+    res.send('');
+});
+
+app.post('/removeColors', (req, res) => {
+    const command = (req.body.value1 || '').toLowerCase().split(' ');
+    const removeColors = extractColors(constants.colorCodes, command);
+    const hasBlackToRemove = utils.hasKeywords(command, constants.kwBlack);
+    const hadBlackInitial = colors.find(c => c === '000000') !== null;
+
+    const wasNonBlackColors = utils.getNonBlack(colors);
+    const newColors = wasNonBlackColors.filter(c => removeColors.indexOf(c) < 0);
+
+    if (random) {
+        utils.shuffle(newColors);
+    }
+
+    if (!hasBlackToRemove && hadBlackInitial) {
+        utils.insertAlternating(newColors, '000000');
+    }
+
+    setColors(newColors);
+    newCode();
+    console.log('some colors removed: ' + getMode());
+    res.send('');
+});
+
 // set mode manual
-app.get('/setMode', (req, res) => {
+app.get('/manualMode', (req, res) => {
     slowness = Number.parseInt(utils.setNew(slowness, req.query.slowness));
     partSize = Number.parseInt(utils.setNew(partSize, req.query.partSize));
     gradient = !!utils.setNew(gradient, req.query.gradient);
@@ -122,7 +172,7 @@ app.get('/setMode', (req, res) => {
     if (req.query.colors !== null && req.query.colors !== undefined) {
         setColors(req.query.colors.split(','));
     }
-    code = (code + 1) % 10;
+    newCode();
     res.send(getMode());
 });
     

@@ -133,3 +133,24 @@ module.exports.shuffle = function(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+module.exports.extractColors = function(colorCodes, command) {
+    const newColors = [];
+    for (colorCode of colorCodes) {
+        if (this.hasKeywords(command, colorCode[0])) {
+            newColors.push(colorCode[1]);
+        }
+    }
+    return newColors;
+}
+
+module.exports.insertAlternating = function(arr, val) {
+    let len = arr.length;
+    while (len > 0) {
+        arr.splice(len--, 0, val);
+    }
+}
+
+module.exports.getNonBlack = function(colors) {
+    return colors.filter(c => c !== '000000');
+}

@@ -59,8 +59,10 @@ module.exports.ledsNum = 130;
 module.exports.kwRainbow = ['радуг', 'радужн', 'разноцветн'];
 module.exports.kwBlack = ['черн', 'чёрн'];
 module.exports.kwFast = ['быстр', 'резк'];
+module.exports.kwMedium = ['средн'];
 module.exports.kwSlow = ['медлен', 'плавн'];
 module.exports.kwGradient = ['градиент', 'перелив'];
+module.exports.kwNonGradient = ['дискрет', 'прерыв', 'пунктир'];
 module.exports.kwNoise = ['шум', 'микс'];
 module.exports.kwStatic = ['статич', 'статик', 'неподвижн'];
 
@@ -73,7 +75,7 @@ module.exports.kwFull = [
     'целиком',
     'целой',
     'целую',
-    'целый'
+    'целый',
 ];
 
 module.exports.kwRandom = [
@@ -84,5 +86,12 @@ module.exports.kwRandom = [
     'рандом',
     'вразнобой',
     'разнобой',
-    'беспоряд'
+    'беспоряд',
+];
+
+module.exports.kwNonRandom = [
+    'упорядоч',
+    'поряд',
+    'очеред',
+    'поочеред',
 ];

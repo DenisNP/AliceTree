@@ -141,7 +141,7 @@ app.post('/addColors', (req, res) => {
 
 app.post('/removeColors', (req, res) => {
     const command = (req.body.value1 || '').toLowerCase().split(' ');
-    const removeColors = extractColors(constants.colorCodes, command);
+    const removeColors = utils.extractColors(constants.colorCodes, command);
     const hasBlackToRemove = utils.hasKeywords(command, constants.kwBlack);
     const hadBlackInitial = colors.find(c => c === '000000') !== null;
 

@@ -73,7 +73,6 @@ app.post('/setMode', (req, res) => {
     if (utils.hasKeywords(command, constants.kwRainbow)) {
         rainbow = true;
     } else {
-        rainbow = false;
         // fill colors array
         const newColors = utils.extractColors(constants.colorCodes, command);
         // shuffle if random
@@ -85,6 +84,7 @@ app.post('/setMode', (req, res) => {
             utils.insertAlternating(newColors, '000000');
         }
         if (newColors.length > 0) {
+            rainbow = false;
             setColors(newColors);
         }
     }

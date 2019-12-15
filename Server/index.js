@@ -121,7 +121,7 @@ app.post('/addColors', (req, res) => {
     const command = (req.body.value1 || '').toLowerCase().split(' ');
     const addColors = utils.extractColors(constants.colorCodes, command);
     const hasBlackToAdd = utils.hasKeywords(command, constants.kwBlack);
-    const hadBlackInitial = colors.find(c => c === '000000') !== null;
+    const hadBlackInitial = !!colors.find(c => c === '000000');
 
     const wasNonBlackColors = utils.getNonBlack(colors);
     const newColors = wasNonBlackColors.concat(addColors);
@@ -146,7 +146,7 @@ app.post('/removeColors', (req, res) => {
     const command = (req.body.value1 || '').toLowerCase().split(' ');
     const removeColors = utils.extractColors(constants.colorCodes, command);
     const hasBlackToRemove = utils.hasKeywords(command, constants.kwBlack);
-    const hadBlackInitial = colors.find(c => c === '000000') !== null;
+    const hadBlackInitial = !!colors.find(c => c === '000000');
 
     const wasNonBlackColors = utils.getNonBlack(colors);
     const newColors = wasNonBlackColors.filter(c => removeColors.indexOf(c) < 0);

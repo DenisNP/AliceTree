@@ -73,7 +73,7 @@ app.post('/setMode', (req, res) => {
     } else {
         rainbow = false;
         // fill colors array
-        const newColors = extractColors(constants.colorCodes, command);
+        const newColors = utils.extractColors(constants.colorCodes, command);
         // shuffle if random
         if (random) {
             utils.shuffle(newColors);
@@ -119,7 +119,7 @@ app.post('/setMode', (req, res) => {
 // add colors
 app.post('/addColors', (req, res) => {
     const command = (req.body.value1 || '').toLowerCase().split(' ');
-    const addColors = extractColors(constants.colorCodes, command);
+    const addColors = utils.extractColors(constants.colorCodes, command);
     const hasBlackToAdd = utils.hasKeywords(command, constants.kwBlack);
     const hadBlackInitial = colors.find(c => c === '000000') !== null;
 

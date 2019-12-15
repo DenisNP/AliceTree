@@ -227,16 +227,10 @@ void animateStep() {
             new_g = leds[i].g;
             new_b = leds[i].b;
         } else {
-            // softly mix with next near the end
-            int stepsToNext = partSize / 3; // part length to start mix
-            int inColorStep = partSize >= 4 ? min(stepsToNext, partSize - ((int)step + i) % partSize) : stepsToNext; // how many leds to next color
-            int nextColor = ((int)floor((double)(step + i + partSize) / partSize)) % currentNumColors; // next color on line
-            float mixRatio = min(1.0, (double)inColorStep / (double)stepsToNext); // mix ratio with next color
-
             // new colors for this led
-            new_r = mixColors(colors[color][0], colors[nextColor][0], mixRatio);
-            new_g = mixColors(colors[color][1], colors[nextColor][1], mixRatio);
-            new_b = mixColors(colors[color][2], colors[nextColor][2], mixRatio);
+            new_r = colors[color][0];
+            new_g = colors[color][1];
+            new_b = colors[color][2];
         }
 
         float coeff = 1.0;

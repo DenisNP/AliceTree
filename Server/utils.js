@@ -141,7 +141,7 @@ module.exports.extractColors = function(colorCodes, command) {
             newColors.push(colorCode[1]);
         }
     }
-    return newColors;
+    return this.getUnique(newColors);
 }
 
 module.exports.insertAlternating = function(arr, val) {
@@ -152,5 +152,9 @@ module.exports.insertAlternating = function(arr, val) {
 }
 
 module.exports.getNonBlack = function(colors) {
-    return colors.filter(c => c !== '000000');
+    return this.getUnique(colors.filter(c => c !== '000000'));
+}
+
+module.exports.getUnique = function(array) {
+    return array.filter((v, i, a) => a.indexOf(v) === i);
 }

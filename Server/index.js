@@ -124,9 +124,7 @@ app.post('/addColors', (req, res) => {
     const hadBlackInitial = !!colors.find(c => c === '000000');
 
     const wasNonBlackColors = utils.getNonBlack(colors);
-    console.log(wasNonBlackColors);
     const newColors = wasNonBlackColors.concat(addColors);
-    console.log(newColors);
     if (random) {
         utils.shuffle(newColors);
     }

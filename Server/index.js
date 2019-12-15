@@ -20,8 +20,10 @@ let colors = Array(constants.colorsNum).fill('ffffff');
 
 function setColors(_colors) {
     for (let i = 0; i < constants.colorsNum; i++) {
+        // fill the colors array with all colors repetitive
         let color = _colors[i % _colors.length];
         if (noise && color !== '000000') {
+            // is this is noise mode randomize color
             color = utils.randomizeColor(color);
         }
         colors[i] = color;

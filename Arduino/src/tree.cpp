@@ -12,16 +12,16 @@ WiFiMulti wifiMulti;
 
 // settings
 #define NUM_LEDS 130
-#define BRIGHTNESS 100
+#define BRIGHTNESS 200
 #define LED_PIN 13
-#define SPEED_COEFF 1
+#define SPEED_COEFF 1 // how fast the animations will be, don't use too much, because FPS is fixed
 
 // led
 CRGB leds[NUM_LEDS];
 byte currentLeds[NUM_LEDS][3];
 
 // colors
-#define NUM_COLORS 24
+#define NUM_COLORS 24 // total colors in colors array
 bool rainbow = false;
 bool isRandom = false;
 byte code = 10;
@@ -36,9 +36,9 @@ bool gradient = false;
 
 // other
 unsigned long lastLoaded = 0;
-#define RELOAD_DELAY_MS 2500
-#define LOOP_DELAY 150
-#define LOOP_ERROR 50
+#define RELOAD_DELAY_MS 2500 // http get request frequency in ms
+#define LOOP_DELAY 150 // one animation frame in ms
+#define LOOP_ERROR 50 // speed up next loop after http data downloading
 
 // declarations
 void setMode(String s);
@@ -57,6 +57,7 @@ void setup() {
     FastLED.setBrightness(BRIGHTNESS);
 
     FastLED.clear();
+    // load full rainbow to see on led strip
     int hue = 0;
     for (int i = 0; i < NUM_LEDS; i++) {
         leds[i].setHSV(hue++ % 255, 255, 255);
@@ -65,6 +66,7 @@ void setup() {
     FastLED.show();
     delay(3000);
 
+    // activate wifi
     wifiMulti.addAP(ssid, password);
 }
 
@@ -79,6 +81,7 @@ void loop() {
 
     FastLED.clear();
     if (code < 10) {
+        // led strip animation
         for (int s = 0; s < SPEED_COEFF; s++) {
             animateStep();
         }
@@ -90,6 +93,7 @@ void loop() {
 
     loadMode(ct);
 
+    // estimate time to delay
     unsigned long after = millis();
     int diff = (int)(after - ct);
     if (diff + LOOP_ERROR < LOOP_DELAY) {
@@ -134,27 +138,27 @@ void loadMode(unsigned long time) {
 
 /**
  * Convert loaded string to led's colors and animation type
- * @param s
+ * @param s downloaded data for new mode
  */
 void setMode(String s) {
-    byte newCode = s.substring(0, 1).toInt();
+    byte newCode = s.substring(0, 1).toInt(); // first digit is code
     if (newCode == code) {
         // same mode as current
         return;
     }
-
+    // load new mode
     speedStep = 0;
     step = 0;
 
     code = newCode;
-    slowness = s.substring(1, 3).toInt();
-    partSize = max(1, (int)s.substring(3, 5).toInt());
-    if (partSize == 0 || partSize > NUM_LEDS) {
+    slowness = s.substring(1, 3).toInt(); // next two digits is slowness 0-99 in theory 0-10 for now
+    partSize = max(0, (int)s.substring(3, 5).toInt()); // next two is part size 0-99
+    if (partSize == 0 || partSize > NUM_LEDS) { // zero is full led
         partSize = NUM_LEDS;
     }
-    gradient = s.substring(5, 6) == "1";
+    gradient = s.substring(5, 6) == "1"; // next digit is 0-1 boolean for gradient mode
     if (gradient) {
-        slowness *= 5;
+        slowness *= 5; // slow down animation for gradient
     }
 
     // load colors
@@ -162,8 +166,8 @@ void setMode(String s) {
     int lastChannel = 0;
     String cStr = "";
 
-    // random
-    isRandom = s.substring(6, 7) == "1";
+    // random mode
+    isRandom = s.substring(6, 7) == "1"; // next digit is 0-1 boolean random mode
     if (isRandom && !gradient) {
         slowness *= 5;
     }
@@ -176,24 +180,24 @@ void setMode(String s) {
     Serial.print("isRandom: "); Serial.println(isRandom);
 
     // rainbow special mode
-    if (s.substring(7, 8) == "-") {
+    if (s.substring(7, 8) == "-") { // if next symbol is '-' there is rainbow mode
         rainbow = true;
         partSize = max(1, partSize / 8);
         Serial.print("rainbow : "); Serial.println(partSize);
         return;
     }
 
-    // normal colors mode
+    // normal colors mode, read colors
     rainbow = false;
     for (int i = 7; i < s.length(); i++) {
         char c = s.charAt(i);
-        cStr += c;
+        cStr += c; // store next char
         unsigned int cLen = cStr.length();
-        if (cLen == 2 && lastColor < NUM_COLORS) {
-            colors[lastColor][lastChannel] = hexToLong(cStr);
+        if (cLen == 2 && lastColor < NUM_COLORS) { // if 2 chars is stored this is hex color for one channel: R, G or B
+            colors[lastColor][lastChannel] = hexToLong(cStr); // store this channel
             Serial.println(colors[lastColor][lastChannel]);
-            lastChannel++;
-            if (lastChannel >= 3) {
+            lastChannel++; // switch to next channel
+            if (lastChannel >= 3) { // if all 3 channels stored, jump to next color
                 lastChannel = 0;
                 lastColor++;
             }
@@ -204,11 +208,14 @@ void setMode(String s) {
     Serial.println("");
 }
 
+/**
+ * One animation step for the entire led strip
+ */
 void animateStep() {
-    int currentNumColors = rainbow ? 255 : NUM_COLORS;
+    int currentNumColors = rainbow ? 255 : NUM_COLORS; // in rainbow mode there are 255 of FastLED's HUE scale
 
     for (int i = 0; i < NUM_LEDS; i++) {
-        int color = ((int)floor((double)(step + i) / partSize)) % currentNumColors;
+        int color = ((int)floor((double)(step + i) / partSize)) % currentNumColors; // current color index in colors array
         int new_r;
         int new_g;
         int new_b;
@@ -221,12 +228,12 @@ void animateStep() {
             new_b = leds[i].b;
         } else {
             // softly mix with next near the end
-            int stepsToNext = partSize >= 4 ? partSize / 2 : 0;
-            int inColorStep = min(stepsToNext, partSize - ((int)step + i) % partSize);
-            int nextColor = ((int)floor((double)(step + i + partSize) / partSize)) % currentNumColors;
-            float mixRatio = (float)inColorStep / (float)stepsToNext;
+            int stepsToNext = partSize / 3; // part length to start mix
+            int inColorStep = partSize >= 4 ? min(stepsToNext, partSize - ((int)step + i) % partSize) : stepsToNext; // how many leds to next color
+            int nextColor = ((int)floor((double)(step + i + partSize) / partSize)) % currentNumColors; // next color on line
+            float mixRatio = min(1.0, (double)inColorStep / (double)stepsToNext); // mix ratio with next color
 
-            // set colors
+            // new colors for this led
             new_r = mixColors(colors[color][0], colors[nextColor][0], mixRatio);
             new_g = mixColors(colors[color][1], colors[nextColor][1], mixRatio);
             new_b = mixColors(colors[color][2], colors[nextColor][2], mixRatio);
@@ -234,9 +241,10 @@ void animateStep() {
 
         float coeff = 1.0;
         if (gradient) {
-            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.8);
+            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.8); // slower value has slower filter speed
         }
 
+        // running average filter
         leds[i].r = currentLeds[i][0] + round(((double)new_r - currentLeds[i][0]) * coeff);
         leds[i].g = currentLeds[i][1] + round(((double)new_g - currentLeds[i][1]) * coeff);
         leds[i].b = currentLeds[i][2] + round(((double)new_b - currentLeds[i][2]) * coeff);
@@ -245,12 +253,13 @@ void animateStep() {
     if (slowness > 0) {
         speedStep++;
         if (speedStep >= slowness) {
-            unsigned int colorLimit = currentNumColors * partSize;
+            // jump one step
+            unsigned int colorLimit = currentNumColors * partSize; // entire virtual colors line
             if (isRandom) {
                 // random jump
                 step = (step + random((int) partSize, (int) colorLimit)) % colorLimit;
             } else if (gradient) {
-                // next color stop
+                // next color stop, jump for part size
                 step = (step + partSize * random(1, currentNumColors)) % colorLimit;
             } else {
                 // next animation step
@@ -261,6 +270,9 @@ void animateStep() {
     }
 }
 
+/**
+ * Store all current leds colors for next step calculation
+ */
 void saveLeds() {
     for (int i = 0; i < NUM_LEDS; i++) {
         currentLeds[i][0] = leds[i].r;
@@ -269,12 +281,24 @@ void saveLeds() {
     }
 }
 
+/**
+ * Convert 2-digit hex color to 0-255 number
+ * @param s input string
+ * @return number
+ */
 long hexToLong(String s){
     char c[s.length() + 1];
     s.toCharArray(c, s.length() + 1);
     return strtol(c, nullptr, 16);
 }
 
+/**
+ * Mix colors together
+ * @param color1 first color to mix
+ * @param color2 second color to mix
+ * @param ratio mix ration from 1.0 (full first color) to 0.0 (full second color)
+ * @return new color value
+ */
 int mixColors(int color1, int color2, float ratio) {
     return (int)round(ratio * (double)color1 + (1.0 - ratio) * (double)color2);
 }

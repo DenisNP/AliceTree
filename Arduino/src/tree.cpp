@@ -241,7 +241,7 @@ void animateStep() {
 
         float coeff = 1.0;
         if (gradient) {
-            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.8); // slower value has slower filter speed
+            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.9); // slower value has slower filter speed
         }
 
         // running average filter
@@ -260,7 +260,7 @@ void animateStep() {
                 step = (step + random((int) partSize, (int) colorLimit)) % colorLimit;
             } else if (gradient) {
                 // next color stop, jump for part size
-                step = (step + partSize * random(1, currentNumColors)) % colorLimit;
+                step = (step + partSize) % colorLimit;
             } else {
                 // next animation step
                 step = (step + 1) % colorLimit;

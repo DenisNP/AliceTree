@@ -14,7 +14,7 @@ WiFiMulti wifiMulti;
 #define NUM_LEDS 130
 #define BRIGHTNESS 100
 #define LED_PIN 13
-#define SPEED_COEFF 5
+#define SPEED_COEFF 1
 
 // led
 CRGB leds[NUM_LEDS];
@@ -36,15 +36,16 @@ bool gradient = false;
 
 // other
 unsigned long lastLoaded = 0;
-#define RELOAD_DELAY_MS 1000
-#define LOOP_DELAY 200
+#define RELOAD_DELAY_MS 2500
+#define LOOP_DELAY 150
+#define LOOP_ERROR 50
 
 // declarations
-void setMode(const String& s);
+void setMode(String s);
 void loadMode(unsigned long time);
 void animateStep();
 void saveLeds();
-long hexToLong(const String& s);
+long hexToLong(String s);
 int mixColors(int color1, int color2, float ratio);
 
 void setup() {
@@ -76,8 +77,6 @@ void loop() {
         return;
     }
 
-    loadMode(ct);
-
     FastLED.clear();
     if (code < 10) {
         for (int s = 0; s < SPEED_COEFF; s++) {
@@ -89,10 +88,12 @@ void loop() {
     saveLeds();
     FastLED.show();
 
+    loadMode(ct);
+
     unsigned long after = millis();
-    unsigned int diff = after - ct;
-    if (diff < LOOP_DELAY) {
-        delay(LOOP_DELAY - diff);
+    int diff = (int)(after - ct);
+    if (diff + LOOP_ERROR < LOOP_DELAY) {
+        delay(LOOP_DELAY - diff - LOOP_ERROR);
     }
 }
 
@@ -135,7 +136,7 @@ void loadMode(unsigned long time) {
  * Convert loaded string to led's colors and animation type
  * @param s
  */
-void setMode(const String& s) {
+void setMode(String s) {
     byte newCode = s.substring(0, 1).toInt();
     if (newCode == code) {
         // same mode as current
@@ -147,19 +148,25 @@ void setMode(const String& s) {
 
     code = newCode;
     slowness = s.substring(1, 3).toInt();
-    partSize = s.substring(3, 5).toInt();
-    if (partSize == 0) {
+    partSize = max(1, (int)s.substring(3, 5).toInt());
+    if (partSize == 0 || partSize > NUM_LEDS) {
         partSize = NUM_LEDS;
     }
     gradient = s.substring(5, 6) == "1";
+    if (gradient) {
+        slowness *= 5;
+    }
 
     // load colors
-    int lastLed = 0;
     int lastColor = 0;
+    int lastChannel = 0;
     String cStr = "";
 
     // random
     isRandom = s.substring(6, 7) == "1";
+    if (isRandom && !gradient) {
+        slowness *= 5;
+    }
 
     // log
     Serial.print("new code: "); Serial.println(code);
@@ -182,10 +189,14 @@ void setMode(const String& s) {
         char c = s.charAt(i);
         cStr += c;
         unsigned int cLen = cStr.length();
-        if (cLen == 2 && lastLed < NUM_COLORS) {
-            colors[lastLed][lastColor] = hexToLong(cStr);
-            Serial.println(colors[lastLed][lastColor]);
-            lastColor = (lastColor + 1) % 3;
+        if (cLen == 2 && lastColor < NUM_COLORS) {
+            colors[lastColor][lastChannel] = hexToLong(cStr);
+            Serial.println(colors[lastColor][lastChannel]);
+            lastChannel++;
+            if (lastChannel >= 3) {
+                lastChannel = 0;
+                lastColor++;
+            }
             cStr = "";
         }
     }
@@ -194,10 +205,10 @@ void setMode(const String& s) {
 }
 
 void animateStep() {
-    unsigned int currentNumColors = rainbow ? 255 : NUM_COLORS;
+    int currentNumColors = rainbow ? 255 : NUM_COLORS;
 
     for (int i = 0; i < NUM_LEDS; i++) {
-        int color = floor((double)(step + i) / partSize);
+        int color = ((int)floor((double)(step + i) / partSize)) % currentNumColors;
         int new_r;
         int new_g;
         int new_b;
@@ -210,9 +221,9 @@ void animateStep() {
             new_b = leds[i].b;
         } else {
             // softly mix with next near the end
-            int stepsToNext = partSize / 2;
+            int stepsToNext = partSize >= 4 ? partSize / 2 : 0;
             int inColorStep = min(stepsToNext, partSize - ((int)step + i) % partSize);
-            unsigned int nextColor = floor((double)(step + i + partSize) / partSize);
+            int nextColor = ((int)floor((double)(step + i + partSize) / partSize)) % currentNumColors;
             float mixRatio = (float)inColorStep / (float)stepsToNext;
 
             // set colors
@@ -223,12 +234,12 @@ void animateStep() {
 
         float coeff = 1.0;
         if (gradient) {
-            coeff = (float)(1.0 - ((float)max(1, min(10, (int)slowness)) - 1.0) / 9.0 * 0.5);
+            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.8);
         }
 
-        leds[i].r += round(((double)new_r - leds[i].r) * coeff);
-        leds[i].g += round(((double)new_g - leds[i].g) * coeff);
-        leds[i].b += round(((double)new_b - leds[i].b) * coeff);
+        leds[i].r = currentLeds[i][0] + round(((double)new_r - currentLeds[i][0]) * coeff);
+        leds[i].g = currentLeds[i][1] + round(((double)new_g - currentLeds[i][1]) * coeff);
+        leds[i].b = currentLeds[i][2] + round(((double)new_b - currentLeds[i][2]) * coeff);
     }
 
     if (slowness > 0) {
@@ -240,7 +251,7 @@ void animateStep() {
                 step = (step + random((int) partSize, (int) colorLimit)) % colorLimit;
             } else if (gradient) {
                 // next color stop
-                step = (step + partSize) % colorLimit;
+                step = (step + partSize * random(1, currentNumColors)) % colorLimit;
             } else {
                 // next animation step
                 step = (step + 1) % colorLimit;
@@ -258,7 +269,7 @@ void saveLeds() {
     }
 }
 
-long hexToLong(const String& s){
+long hexToLong(String s){
     char c[s.length() + 1];
     s.toCharArray(c, s.length() + 1);
     return strtol(c, nullptr, 16);

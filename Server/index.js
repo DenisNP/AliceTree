@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 let code = 0;
 let slowness = 5;
 let partSize = 10;
-let gradient = true;
+let gradient = false;
 let random = false;
 let rainbow = false;
 let noise = false;
@@ -133,7 +133,10 @@ app.post('/addColors', (req, res) => {
         utils.insertAlternating(newColors, '000000');
     }
 
-    setColors(newColors);
+    if (newColors.length > 0) {
+        rainbow = false;
+        setColors(newColors);
+    }
     newCode();
     console.log('new colors added: ' + getMode());
     res.send('');

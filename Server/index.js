@@ -99,16 +99,19 @@ app.post('/setMode', (req, res) => {
     }
     
     // parts size
-    for (token of command) {
-        const number = Number.parseInt(token);
-        if (!Number.isNaN(number)) {
-            const pSize = Math.round(constants.ledsNum / number);
-            partSize = utils.limit(pSize, 1, constants.ledsNum);
-            break;
-        }
-    }
     if (utils.hasKeywords(command, constants.kwFull)) {
         partSize = 0;
+    } else if (utils.hasKeywords(command, constants.kwFill)) {
+        partSize = 1;
+    } else {
+        for (token of command) {
+            const number = Number.parseInt(token);
+            if (!Number.isNaN(number)) {
+                const pSize = Math.round(constants.ledsNum / number);
+                partSize = utils.limit(pSize, 1, constants.ledsNum);
+                break;
+            }
+        }
     }
     
     newCode();

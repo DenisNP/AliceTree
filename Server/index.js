@@ -51,6 +51,7 @@ function newCode() {
 // handle request
 app.post('/setMode', (req, res) => {
     const command = (req.body.value1 || '').toLowerCase().split(' ');
+    console.log(command);
 
     // gradient
     if (utils.hasKeywords(command, constants.kwGradient)) {

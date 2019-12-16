@@ -65,7 +65,7 @@ module.exports.kwGradient = ['градиент', 'перелив'];
 module.exports.kwNonGradient = ['дискрет', 'прерыв', 'пунктир'];
 module.exports.kwNoise = ['шум', 'микс'];
 module.exports.kwStatic = ['статич', 'статик', 'неподвижн'];
-module.exports.kwFill = ['заполн', 'одиночн'];
+module.exports.kwFill = ['заполн', 'запомн', 'одиночн'];
 
 module.exports.kwFull = [
     'полностью',

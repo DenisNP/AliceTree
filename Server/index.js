@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const utils = require('./utils');
-const constants = require('./contants');
+const constants = require('./constants');
 
 const app = express();
 const port = 3000;

@@ -157,7 +157,7 @@ void setMode(String s) {
         partSize = NUM_LEDS;
     }
     gradient = s.substring(5, 6) == "1"; // next digit is 0-1 boolean for gradient mode
-    if (gradient) {
+    if (gradient && !rainbow) {
         slowness *= 5; // slow down animation for gradient
     }
 
@@ -235,13 +235,13 @@ void animateStep() {
 
         float coeff = 1.0;
         if (gradient) {
-            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.9); // slower value has slower filter speed
+            coeff = (float)(1.0 - (float)max(1, min(10, (int)slowness)) / 10.0 * 0.8); // slower value has slower filter speed
         }
 
         // running average filter
-        leds[i].r = currentLeds[i][0] + round(((double)new_r - currentLeds[i][0]) * coeff);
-        leds[i].g = currentLeds[i][1] + round(((double)new_g - currentLeds[i][1]) * coeff);
-        leds[i].b = currentLeds[i][2] + round(((double)new_b - currentLeds[i][2]) * coeff);
+        leds[i].r = max(0, min(255, (int)floor((double)currentLeds[i][0] + ((double)new_r - currentLeds[i][0]) * coeff)));
+        leds[i].g = max(0, min(255, (int)floor((double)currentLeds[i][1] + ((double)new_g - currentLeds[i][1]) * coeff)));
+        leds[i].b = max(0, min(255, (int)floor((double)currentLeds[i][2] + ((double)new_b - currentLeds[i][2]) * coeff)));
     }
 
     if (slowness > 0) {
@@ -254,10 +254,10 @@ void animateStep() {
                 step = (step + random((int) partSize, (int) colorLimit)) % colorLimit;
             } else if (gradient) {
                 // next color stop, jump for part size
-                step = (step + partSize) % colorLimit;
+                step = (step + partSize * (rainbow ? 4 : 1)) % colorLimit;
             } else {
                 // next animation step
-                step = (step + 1) % colorLimit;
+                step = (step + (rainbow ? 20 : 1)) % colorLimit;
             }
             speedStep = 0;
         }
